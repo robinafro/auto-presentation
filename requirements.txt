@@ -1,0 +1,7 @@
+python-dotenv
+requests
+openai
+bing-image-urls
+argparse
+beautifulsoup4
+google

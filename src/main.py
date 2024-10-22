@@ -80,7 +80,11 @@ if __name__ == "__main__":
             language=args.language,
         )
     elif args.command == "generate":
+        format = args.output.split(".")[-1]
+
+        assert format in ["pptx", "pdf", "html"], "Invalid format"
+
         stdin = sys.stdin.read()
-        convert_to_presentation(stdin, args.output)
+        convert_to_presentation(stdin, args.output, format=format)
     else:
         raise ValueError("Invalid command")

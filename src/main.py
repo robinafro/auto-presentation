@@ -1,12 +1,10 @@
-from ai import fill_sysprompt, get_response, create_client
+from ai import fill_sysprompt
 from images import parse_img_tags
 from sources import parse_source_tags
 from marp import marp_convert
 from settings import MD_STORE_DIR, PPTX_STORE_DIR
 import argparse
 import os, sys
-
-client = create_client()
 
 
 def get_prompt(**kwargs):
